@@ -170,6 +170,7 @@ static ListResultItem_t* GetProperties(struct udev_device* dev, ListResultItem_t
 	item->productId = strtol(udev_device_get_sysattr_value(dev,"idProduct"), NULL, 16);
 	item->deviceAddress = 0;
 	item->locationId = 0;
+	item->allprops =  sysattrs;
 
 	return item;
 }
